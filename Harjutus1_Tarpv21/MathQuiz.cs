@@ -308,7 +308,7 @@ namespace Harjutus1_Tarpv21
             for (int ii = 0; ii < 4; ii++)
             {
 
-                int numA = rnd.Next(10, 20);
+                int numA = rnd.Next(0, 10);
                 int numB = rnd.Next(0, 9);
 
                 txtAnswerArray[ii].Text = null;

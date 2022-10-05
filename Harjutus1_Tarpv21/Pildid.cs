@@ -22,7 +22,7 @@ namespace Harjutus1_Tarpv21
 
         public Pildid()
         {
-            this.Size = new System.Drawing.Size(920, 550);
+            this.Size = new Size(920, 550);
             this.Text = "Picture Viewer";
             tableLayoutPanel = new TableLayoutPanel
             {
@@ -35,24 +35,24 @@ namespace Harjutus1_Tarpv21
                 BackColor = Color.White,
             };
             tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle
-                (System.Windows.Forms.SizeType.Percent, 15F));
+                (SizeType.Percent, 15F));
             tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle
-                (System.Windows.Forms.SizeType.Percent, 85F));
+                (SizeType.Percent, 85F));
             tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.RowStyle
-                (System.Windows.Forms.SizeType.Percent, 90F));
+                (SizeType.Percent, 90F));
             tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.RowStyle
-                (System.Windows.Forms.SizeType.Percent, 5F));
+                (SizeType.Percent, 5F));
             tableLayoutPanel.ResumeLayout(false);
 
             this.Controls.Add(tableLayoutPanel);
 
 
-            picturebox = new System.Windows.Forms.PictureBox
+            picturebox = new PictureBox
             {
-                BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D,
-                Dock = System.Windows.Forms.DockStyle.Fill,
-                Location = new System.Drawing.Point(2, 2),
-                Size = new System.Drawing.Size(528, 269),
+                BorderStyle = BorderStyle.Fixed3D,
+                Dock = DockStyle.Fill,
+                Location = new Point(2, 2),
+                Size = new Size(528, 269),
                 TabIndex = 0,
                 TabStop = false,
             };
@@ -64,14 +64,14 @@ namespace Harjutus1_Tarpv21
             checkBox = new CheckBox
             {
                 AutoSize = true,
-                Location = new System.Drawing.Point(3, 278),
-                Size = new System.Drawing.Size(117, 30),
+                Location = new Point(3, 278),
+                Size = new Size(117, 30),
                 TabIndex = 1,
                 UseVisualStyleBackColor = true,
                 Text = "Stretch",
-                Dock = System.Windows.Forms.DockStyle.Fill,
+                Dock = DockStyle.Fill,
             };
-            checkBox.CheckedChanged += new System.EventHandler(checkBox_CheckedChanged);
+            checkBox.CheckedChanged += new EventHandler(checkBox_CheckedChanged);
             tableLayoutPanel.Controls.Add(checkBox, 1, 0);
 
 
@@ -83,15 +83,15 @@ namespace Harjutus1_Tarpv21
             close = new Button
             {
                 AutoSize = true,
-                Location = new System.Drawing.Point(3, 3),
-                Size = new System.Drawing.Size(75, 23),
+                Location = new Point(3, 3),
+                Size = new Size(75, 23),
                 TabIndex = 0,
                 Text = "Close",
                 UseVisualStyleBackColor = true,
 
 
             };
-            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.Click += new EventHandler(this.close_Click);
             tableLayoutPanel.Controls.Add(close);
 
 
@@ -109,41 +109,41 @@ namespace Harjutus1_Tarpv21
             backgroundcolor = new Button
             {
                 AutoSize = true,
-                Location = new System.Drawing.Point(84, 3),
-                Size = new System.Drawing.Size(121, 23),
+                Location = new Point(84, 3),
+                Size = new Size(121, 23),
                 TabIndex = 1,
                 Text = "Set Background Color",
                 UseVisualStyleBackColor = true,
 
             };
             tableLayoutPanel.Controls.Add(backgroundcolor);
-            this.backgroundcolor.Click += new System.EventHandler(this.backgroundcolor_Click);
+            this.backgroundcolor.Click += new EventHandler(this.backgroundcolor_Click);
 
 
             clear = new Button
             {
                 AutoSize = true,
-                Location = new System.Drawing.Point(211, 3),
-                Size = new System.Drawing.Size(75, 23),
+                Location = new Point(211, 3),
+                Size = new Size(75, 23),
                 TabIndex = 2,
                 Text = "Clear",
                 UseVisualStyleBackColor = true,
             };
             tableLayoutPanel.Controls.Add(clear);
-            this.clear.Click += new System.EventHandler(this.clear_Click);
+            this.clear.Click += new EventHandler(this.clear_Click);
 
             showapicture = new Button
             {
                 AutoSize = true,
-                Location = new System.Drawing.Point(292, 3),
-                Size = new System.Drawing.Size(102, 23),
+                Location = new Point(292, 3),
+                Size = new Size(102, 23),
                 TabIndex = 3,
                 Text = "Show The Picture",
                 UseVisualStyleBackColor = true,
 
             };
             tableLayoutPanel.Controls.Add(showapicture);
-            this.showapicture.Click += new System.EventHandler(this.showapicture_Click);
+            this.showapicture.Click += new EventHandler(this.showapicture_Click);
 
             openfiledialog1 = new OpenFileDialog
             {

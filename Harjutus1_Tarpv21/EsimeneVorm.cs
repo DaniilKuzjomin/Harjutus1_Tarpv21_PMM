@@ -23,7 +23,7 @@ namespace Harjutus1_Tarpv21
             this.Size = new Size(600, 400);
             this.BackColor = Color.White;
 
-            button1 = new Button
+            button1 = new Button // nupp mis teeb lahti Picture Viewer
             {
                 Text = "PictureViewer",
                 Location = new Point(100, 50),
@@ -31,7 +31,7 @@ namespace Harjutus1_Tarpv21
                 Size = new Size(120, 70)
             };
 
-            button2 = new Button
+            button2 = new Button // nupp mis teeb lahti Math Quiz
             {
                 Text = "Math Quiz",
                 Location = new Point(230, 50),
@@ -39,7 +39,7 @@ namespace Harjutus1_Tarpv21
                 Size = new Size(120, 70)
             };
 
-            button3 = new Button
+            button3 = new Button // nupp mis teeb lahti Matching game
             {
                 Text = "Matching Game",
                 Location = new Point(360, 50),
