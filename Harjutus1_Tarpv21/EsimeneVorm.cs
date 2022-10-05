@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -10,63 +11,69 @@ namespace Harjutus1_Tarpv21
 {
     public class EsimeneVorm : Form
     {
-        public EsimeneVorm() { }
-        public EsimeneVorm(string Pealkiri)
+        
+
+        Button button1;
+        Button button2;
+        Button button3;
+
+        public EsimeneVorm()
         {
-            this.ClientSize = new System.Drawing.Size(380, 300);
-            this.Text = Pealkiri;
-            Button nupp = new Button
+            this.Text = "Esimene Vorm";
+            this.Size = new Size(600, 400);
+            this.BackColor = Color.White;
+
+            button1 = new Button
             {
-                Text = String.Format("Picture Viewer"),
-                Location = new System.Drawing.Point(50, 50),
-                Size = new System.Drawing.Size(100, 50),
-                BackColor = System.Drawing.Color.White,
-
+                Text = "PictureViewer",
+                Location = new Point(100, 50),
+                BackColor = Color.White,
+                Size = new Size(120, 70)
             };
-            nupp.Click += Nupp_Click;
-            Button nupp1 = new Button
+
+            button2 = new Button
             {
-                Text = String.Format("Math Quiz"),
-                Location = new System.Drawing.Point(150, 50),
-                Size = new System.Drawing.Size(100, 50),
-                BackColor = System.Drawing.Color.White,
+                Text = "Math Quiz",
+                Location = new Point(230, 50),
+                BackColor = Color.White,
+                Size = new Size(120, 70)
             };
-            nupp1.Click += Nupp_Click1;
 
-            Button nupp2 = new Button
+            button3 = new Button
             {
-                Text = String.Format("Matching Game"),
-                Location = new System.Drawing.Point(250, 50),
-                Size = new System.Drawing.Size(100, 50),
-                BackColor = System.Drawing.Color.White,
+                Text = "Matching Game",
+                Location = new Point(360, 50),
+                BackColor = Color.White,
+                Size = new Size(120, 70),
             };
-            nupp2.Click += Nupp_Click2;
 
+            button1.Click += Button1_Click;
+            button2.Click += Button2_Click;
+            button3.Click += Button3_Click;
 
-            Controls.Add(nupp);
-            Controls.Add(nupp1);
-            Controls.Add(nupp2);
+            this.Controls.Add(button1);
+            this.Controls.Add(button2);
+            this.Controls.Add(button3);
+
 
         }
 
-
-        private void Nupp_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
-
+            MatchingGame game = new MatchingGame();
+            game.Show();
         }
 
-        private void Nupp_Click1(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
-
-
-
+            MathQuiz mathquiz = new MathQuiz();
+            mathquiz.Show();
         }
 
-        private void Nupp_Click2(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-
+            Pildid pildid = new Pildid();
+            pildid.Show();
         }
-
-
     }
 }

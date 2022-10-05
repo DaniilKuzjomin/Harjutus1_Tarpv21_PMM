@@ -16,9 +16,7 @@ namespace Harjutus1_Tarpv21
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pildid());
-            Application.Run(new MathQuiz());
-            Application.Run(new MatchingGame());
+            Application.Run(new EsimeneVorm());
 
         }
     }

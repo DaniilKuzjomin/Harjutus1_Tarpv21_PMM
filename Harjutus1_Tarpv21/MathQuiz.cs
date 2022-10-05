@@ -12,7 +12,7 @@ namespace Harjutus1_Tarpv21
 {
     public class MathQuiz : Form
     {
-        public event EventHandler Tick;
+        
         Random rnd = new Random();
         string[] Maths = { "Lisa", "Lahuta", "Korruta" };
         int total1, total2, total3, total4, score, correct;
@@ -20,10 +20,10 @@ namespace Harjutus1_Tarpv21
         private Timer timer1;
         private Label lblScore;
         private Label lblTimer, lblSymbol1, lblSymbol2, lblSymbol3, lblSymbol4, lblNumB1, lblNumB2, lblNumB3, lblNumB4, lblEquals1, lblEquals2, lblEquals3, lblEquals4, lblAnswer, lblNumA1, lblNumA2, lblNumA3, lblNumA4;
-        private TextBox txtAnswer1, txtAnswer2, txtAnswer3, txtAnswer4;
+        private NumericUpDown txtAnswer1, txtAnswer2, txtAnswer3, txtAnswer4;
         private Button button1, buttonTimer;
         Label[] labelSymArray = { }, lblNumArrayA = { }, lblNumArrayB = { }, lblEqualsArray = { };
-        TextBox[] txtAnswerArray = { };
+        NumericUpDown[] txtAnswerArray = { };
         int[] totalArray = { };
 
         TableLayoutPanel tableLayoutPanel1;
@@ -45,7 +45,7 @@ namespace Harjutus1_Tarpv21
             lblNumArrayA = new Label[] { lblNumA1, lblNumA2, lblNumA3, lblNumA4 };
             lblNumArrayB = new Label[] { lblNumB1, lblNumB2, lblNumB3, lblNumB4 };
             lblEqualsArray = new Label[] { lblEquals1, lblEquals2, lblEquals3, lblEquals4 };
-            txtAnswerArray = new TextBox[] { txtAnswer1, txtAnswer2, txtAnswer3, txtAnswer4 };
+            txtAnswerArray = new NumericUpDown[] { txtAnswer1, txtAnswer2, txtAnswer3, txtAnswer4 };
             totalArray = new int[] { total1, total2, total3, total4 };
 
             int i = 0;
@@ -144,12 +144,11 @@ namespace Harjutus1_Tarpv21
                 Text = ""
             };
 
-            foreach (TextBox sym in txtAnswerArray)
+            foreach (NumericUpDown sym in txtAnswerArray)
             {
-                txtAnswerArray[i] = new TextBox
+                txtAnswerArray[i] = new NumericUpDown
                 {
                     Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 200),
-                    Multiline = true,
                     Name = "txtAnswer",
                     Size = new Size(80, 35),
                     TabIndex = 6
@@ -201,11 +200,6 @@ namespace Harjutus1_Tarpv21
             timer1.Tick += timer1_Tick;
             buttonTimer.Click += ButtonTimer_Click;
 
-            txtAnswerArray[0].TextChanged += new EventHandler(CheckAnswer);
-            txtAnswerArray[1].TextChanged += new EventHandler(CheckAnswer);
-            txtAnswerArray[2].TextChanged += new EventHandler(CheckAnswer);
-            txtAnswerArray[3].TextChanged += new EventHandler(CheckAnswer);
-
             button1.Click += new EventHandler(CheckButtonClickEvent);
 
             tableLayoutPanel1.Controls.Add(lblNumArrayA[0], 0, 0);
@@ -234,9 +228,9 @@ namespace Harjutus1_Tarpv21
             tableLayoutPanel1.Controls.Add(lblEqualsArray[3], 3, 3);
 
             tableLayoutPanel1.Controls.Add(lblAnswer, 4, 4);
-            tableLayoutPanel1.Controls.Add(lblScore, 4, 4);
+            tableLayoutPanel1.Controls.Add(lblScore, 0, 4);
             tableLayoutPanel1.Controls.Add(button1, 4, 4);
-            tableLayoutPanel1.Controls.Add(buttonTimer, 4, 5);
+            tableLayoutPanel1.Controls.Add(buttonTimer, 6, 5);
             tableLayoutPanel1.Controls.Add(lblTimer);
 
         }
@@ -268,18 +262,6 @@ namespace Harjutus1_Tarpv21
             timer1.Start();
         }
 
-        private void CheckAnswer(object sender, EventArgs e)
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                if (System.Text.RegularExpressions.Regex.IsMatch(txtAnswerArray[i].Text, "[^0-9]"))
-                {
-                    MessageBox.Show("Ainult numbrid palun!");
-                    txtAnswerArray[i].Text = txtAnswerArray[i].Text.Remove(txtAnswerArray[i].Text.Length - 1);
-                }
-            }
-        }
-
         private void CheckButtonClickEvent(object sender, EventArgs e)
         {
 
@@ -292,7 +274,7 @@ namespace Harjutus1_Tarpv21
                 }
                 catch (FormatException)
                 {
-                    //MessageBox.Show("Kõik numbrid kirjuta!");
+
                 }
 
                 if (userEntered == totalArray[i])
