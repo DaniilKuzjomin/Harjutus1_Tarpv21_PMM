@@ -8,6 +8,12 @@ using System.Windows.Forms;
 using System.Timers;
 using Timer = System.Windows.Forms.Timer;
 
+
+
+// Looge matemaatikutele 3 erinevat režiimi, nagu algaja, keskmine, edasijõudnud
+//
+//
+
 namespace Harjutus1_Tarpv21
 {
     public class MathQuiz : Form
