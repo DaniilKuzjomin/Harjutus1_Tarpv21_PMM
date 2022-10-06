@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// Teha erineva raskusastmega režiime
+
+
 namespace Harjutus1_Tarpv21
 {
     public class MatchingGame : Form
