@@ -60,6 +60,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EsimeneVorm.resx">
+      <DependentUpon>EsimeneVorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchingGame.resx">
+      <DependentUpon>MatchingGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathQuiz.resx">
+      <DependentUpon>MathQuiz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pildid.resx">
       <DependentUpon>Pildid.cs</DependentUpon>
     </EmbeddedResource>

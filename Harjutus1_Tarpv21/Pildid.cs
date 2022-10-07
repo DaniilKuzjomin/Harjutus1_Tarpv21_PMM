@@ -24,9 +24,9 @@ namespace Harjutus1_Tarpv21
 
         public Pildid()
         {
-            this.Size = new Size(920, 550);
+            this.Size = new Size(920, 550); // akna paraametrid
             this.Text = "Picture Viewer";
-            tableLayoutPanel = new TableLayoutPanel
+            tableLayoutPanel = new TableLayoutPanel // tableLayoutPanel paraametrid
             {
                 AutoSize = true,
                 ColumnCount = 2,
@@ -49,7 +49,7 @@ namespace Harjutus1_Tarpv21
             this.Controls.Add(tableLayoutPanel);
 
 
-            picturebox = new PictureBox
+            picturebox = new PictureBox // PictureBox paraametrid
             {
                 BorderStyle = BorderStyle.Fixed3D,
                 Dock = DockStyle.Fill,
@@ -63,7 +63,7 @@ namespace Harjutus1_Tarpv21
             tableLayoutPanel.SetColumnSpan(picturebox, 2);
 
 
-            checkBox = new CheckBox
+            checkBox = new CheckBox // Checkbox paraametrid
             {
                 AutoSize = true,
                 Location = new Point(3, 278),
@@ -79,10 +79,10 @@ namespace Harjutus1_Tarpv21
 
 
 
-            this.Controls.Add(tableLayoutPanel);
+            this.Controls.Add(tableLayoutPanel); // vormi lisamine tableLayoutPanel
 
 
-            close = new Button
+            close = new Button // button paraametrid
             {
                 AutoSize = true,
                 Location = new Point(3, 3),
@@ -93,12 +93,12 @@ namespace Harjutus1_Tarpv21
 
 
             };
-            this.close.Click += new EventHandler(this.close_Click);
-            tableLayoutPanel.Controls.Add(close);
+            close.Click += new EventHandler(close_Click);
+            tableLayoutPanel.Controls.Add(close); // vormis lisamine button
 
 
 
-            colordialog = new ColorDialog
+            colordialog = new ColorDialog // Colordialog paraametrid
             {
                 AllowFullOpen = true,
                 AnyColor = true,
@@ -108,7 +108,7 @@ namespace Harjutus1_Tarpv21
 
 
 
-            backgroundcolor = new Button
+            backgroundcolor = new Button // button paraametrid
             {
                 AutoSize = true,
                 Location = new Point(84, 3),
@@ -118,11 +118,11 @@ namespace Harjutus1_Tarpv21
                 UseVisualStyleBackColor = true,
 
             };
-            tableLayoutPanel.Controls.Add(backgroundcolor);
+            tableLayoutPanel.Controls.Add(backgroundcolor); // vormis lisamine button
             this.backgroundcolor.Click += new EventHandler(this.backgroundcolor_Click);
 
 
-            clear = new Button
+            clear = new Button // button paraametrid
             {
                 AutoSize = true,
                 Location = new Point(211, 3),
@@ -131,10 +131,10 @@ namespace Harjutus1_Tarpv21
                 Text = "Clear",
                 UseVisualStyleBackColor = true,
             };
-            tableLayoutPanel.Controls.Add(clear);
+            tableLayoutPanel.Controls.Add(clear); // vormis lisamine button
             this.clear.Click += new EventHandler(this.clear_Click);
 
-            showapicture = new Button
+            showapicture = new Button // button paraametrid
             {
                 AutoSize = true,
                 Location = new Point(292, 3),
@@ -144,10 +144,10 @@ namespace Harjutus1_Tarpv21
                 UseVisualStyleBackColor = true,
 
             };
-            tableLayoutPanel.Controls.Add(showapicture);
+            tableLayoutPanel.Controls.Add(showapicture); // vormis lisamine button
             this.showapicture.Click += new EventHandler(this.showapicture_Click);
 
-            openfiledialog1 = new OpenFileDialog
+            openfiledialog1 = new OpenFileDialog // OpenFileDialog paraametrid
             {
                 RestoreDirectory = true,
                 Title = "Browse Text Files",
@@ -156,16 +156,16 @@ namespace Harjutus1_Tarpv21
 
             };
 
-            Button[] buttons = { clear, showapicture, close, backgroundcolor };
-            flowlayoutpanel = new FlowLayoutPanel
+            Button[] buttons = { clear, showapicture, close, backgroundcolor }; // list
+            flowlayoutpanel = new FlowLayoutPanel // flowLayoutPanel paraametrid
             {
                 Dock = DockStyle.Fill,
                 FlowDirection = FlowDirection.LeftToRight,
                 Size = new Size(200, 50),
             };
-            flowlayoutpanel.Controls.AddRange(buttons);
-            tableLayoutPanel.Controls.Add(flowlayoutpanel, 1, 1);
-            this.Controls.Add(tableLayoutPanel);
+            flowlayoutpanel.Controls.AddRange(buttons); // flowLayoutPanelisse buttoni lisamine
+            tableLayoutPanel.Controls.Add(flowlayoutpanel, 1, 1); // asukohta seadistus
+            Controls.Add(tableLayoutPanel); // vormis lisamine tableLayoutPanel
         }
 
 
@@ -188,14 +188,12 @@ namespace Harjutus1_Tarpv21
 
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Pildid
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Pildid";
-            this.Load += new System.EventHandler(this.Pildid_Load);
-            this.ResumeLayout(false);
+            SuspendLayout();
+
+            ClientSize = new Size(284, 261);
+            Name = "Pildid";
+            Load += new EventHandler(Pildid_Load);
+            ResumeLayout(false);
 
         }
 

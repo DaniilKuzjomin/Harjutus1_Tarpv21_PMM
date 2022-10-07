@@ -18,7 +18,7 @@ namespace Harjutus1_Tarpv21
 {
     public class MathQuiz : Form
     {
-        
+
         Random rnd = new Random();
         string[] Maths = { "Lisa", "Lahuta", "Korruta" };
         int total1, total2, total3, total4, score, correct;
@@ -251,7 +251,7 @@ namespace Harjutus1_Tarpv21
             else
             {
                 timer1.Stop();
-                lblTimer.Text = "Rohkem aega ei ole!";
+                lblTimer.Text = "Ei ole rohkem aega :(";
                 foreach (var item in txtAnswerArray)
                 {
                     item.Enabled = false;

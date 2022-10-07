@@ -38,7 +38,7 @@ namespace Harjutus1_Tarpv21
             components = new System.ComponentModel.Container();
 
 
-            tableLayoutPanel = new TableLayoutPanel
+            tableLayoutPanel = new TableLayoutPanel // tableLayoutPanel paraametrid
             {
                 BackColor = Color.Pink,
                 CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset,
@@ -63,7 +63,8 @@ namespace Harjutus1_Tarpv21
             SuspendLayout();
 
 
-            label16 = new Label {
+            label16 = new Label // label paraametrid
+            {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
                 Location = new Point(404, 383),
@@ -76,7 +77,7 @@ namespace Harjutus1_Tarpv21
             };
             label16.Click += new EventHandler(this.label_Click);
 
-            label15 = new Label
+            label15 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -91,7 +92,7 @@ namespace Harjutus1_Tarpv21
             label15.Click += new EventHandler(label_Click);
 
 
-            label14 = new Label
+            label14 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -105,7 +106,7 @@ namespace Harjutus1_Tarpv21
             };
             label14.Click += new EventHandler(label_Click);
 
-            label13 = new Label
+            label13 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -119,7 +120,7 @@ namespace Harjutus1_Tarpv21
             };
             label13.Click += new EventHandler(label_Click);
 
-            label12 = new Label
+            label12 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2))),
@@ -133,7 +134,7 @@ namespace Harjutus1_Tarpv21
             };
             label12.Click += new EventHandler(label_Click);
 
-            label11 = new Label
+            label11 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -147,7 +148,7 @@ namespace Harjutus1_Tarpv21
             };
             label11.Click += new EventHandler(label_Click);
 
-            label10 = new Label
+            label10 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -161,7 +162,7 @@ namespace Harjutus1_Tarpv21
             };
             label10.Click += new EventHandler(label_Click);
 
-            label9 = new Label
+            label9 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -175,7 +176,7 @@ namespace Harjutus1_Tarpv21
             };
             label9.Click += new EventHandler(label_Click);
 
-            label8 = new Label
+            label8 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -189,7 +190,7 @@ namespace Harjutus1_Tarpv21
             };
             label8.Click += new EventHandler(label_Click);
 
-            label7 = new Label
+            label7 = new Label // label paraametrid 
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -203,7 +204,7 @@ namespace Harjutus1_Tarpv21
             };
             label7.Click += new EventHandler(label_Click);
 
-            label6 = new Label
+            label6 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -217,7 +218,7 @@ namespace Harjutus1_Tarpv21
             };
             label6.Click += new EventHandler(label_Click);
 
-            label5 = new Label
+            label5 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -231,7 +232,7 @@ namespace Harjutus1_Tarpv21
             };
             label5.Click += new EventHandler(label_Click);
 
-            label4 = new Label
+            label4 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -245,7 +246,7 @@ namespace Harjutus1_Tarpv21
             };
             label4.Click += new System.EventHandler(label_Click);
 
-            label3 = new Label
+            label3 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -259,7 +260,7 @@ namespace Harjutus1_Tarpv21
             };
             label3.Click += new System.EventHandler(label_Click);
 
-            label2 = new Label
+            label2 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -273,7 +274,7 @@ namespace Harjutus1_Tarpv21
             };
             label2.Click += new EventHandler(label_Click);
 
-            label1 = new Label
+            label1 = new Label // label paraametrid
             {
                 Dock = DockStyle.Fill,
                 Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(2))),
@@ -287,13 +288,15 @@ namespace Harjutus1_Tarpv21
             };
             label1.Click += new EventHandler(label_Click);
 
-            timer1 = new Timer {
+            timer1 = new Timer // timer paraametrid
+            {
                 Interval = 750,
 
             };
             timer1.Tick += new EventHandler(timer1_Tick);
 
-            Form1 = new Form {
+            Form1 = new Form // vormi paraametrid
+            {
                 AutoScaleDimensions = new SizeF(6F, 13F),
                 AutoScaleMode = AutoScaleMode.Font,
                 ClientSize = new Size(534, 511),
@@ -304,28 +307,28 @@ namespace Harjutus1_Tarpv21
             tableLayoutPanel.ResumeLayout(false);
             ResumeLayout(false);
 
-            Controls.Add(tableLayoutPanel);
-            tableLayoutPanel.Controls.Add(label16, 3, 3);
-            tableLayoutPanel.Controls.Add(label15, 2, 3);
-            tableLayoutPanel.Controls.Add(label14, 1, 3);
-            tableLayoutPanel.Controls.Add(label13, 0, 3);
-            tableLayoutPanel.Controls.Add(label12, 3, 2);
-            tableLayoutPanel.Controls.Add(label11, 2, 2);
-            tableLayoutPanel.Controls.Add(label10, 1, 2);
-            tableLayoutPanel.Controls.Add(label9, 0, 2);
-            tableLayoutPanel.Controls.Add(label8, 3, 1);
-            tableLayoutPanel.Controls.Add(label7, 2, 1);
-            tableLayoutPanel.Controls.Add(label6, 1, 1);
-            tableLayoutPanel.Controls.Add(label5, 0, 1);
-            tableLayoutPanel.Controls.Add(label4, 3, 0);
-            tableLayoutPanel.Controls.Add(label3, 2, 0);
-            tableLayoutPanel.Controls.Add(label2, 1, 0);
-            tableLayoutPanel.Controls.Add(label1, 0, 0);
+            Controls.Add(tableLayoutPanel); // tableLayoutPanel vormile lisamine
+            tableLayoutPanel.Controls.Add(label16, 3, 3); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label15, 2, 3); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label14, 1, 3); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label13, 0, 3); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label12, 3, 2); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label11, 2, 2); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label10, 1, 2); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label9, 0, 2); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label8, 3, 1); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label7, 2, 1); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label6, 1, 1); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label5, 0, 1); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label4, 3, 0); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label3, 2, 0); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label2, 1, 0); // label vormile lisamine ja koha määramine
+            tableLayoutPanel.Controls.Add(label1, 0, 0); // label vormile lisamine ja koha määramine
 
         }
 
 
-        List<string> icons = new List<string>()
+        List<string> icons = new List<string>() // ikoonidega loendi lisamine
         {
             "!", "!", "N", "N", ",", ",", "k", "k",
             "b", "b", "v", "v", "w", "w", "z", "z"
@@ -402,7 +405,7 @@ namespace Harjutus1_Tarpv21
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) // timer
         {
 
             timer1.Stop();
@@ -416,7 +419,7 @@ namespace Harjutus1_Tarpv21
             secondClicked = null;
         }
 
-        private void CheckForWinner()
+        private void CheckForWinner() // kontrollib, kas mäng on lõppenud
         {
 
             foreach (Control control in tableLayoutPanel.Controls)
