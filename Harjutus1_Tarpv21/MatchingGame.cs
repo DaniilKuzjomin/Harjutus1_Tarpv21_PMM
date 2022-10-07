@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // Teha erineva raskusastmega režiime
+// piiratud aja ja taimeriga töötava režiimi lisamine
 
 
 namespace Harjutus1_Tarpv21
