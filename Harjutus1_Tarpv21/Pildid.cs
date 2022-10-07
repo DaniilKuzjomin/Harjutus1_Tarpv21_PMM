@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// kui lisate faili, et kuvada selle nimi vormis
+
 namespace Harjutus1_Tarpv21
 {
     public class Pildid : Form
