@@ -4,7 +4,9 @@ tahan teha muusikat seda vormis et kasutaja saab kuulata muusikat
 
 tahan teha kui lisate faili picture viweris et kuvada selle nimi vormis
 
-tahan lisada matšimängu lõpus tehke nupp, mis küsib, kas soovite uuesti proovida
+tahan lisada matšimängu lõpus tehke aken, mis küsib, kas soovite uuesti proovida
+
+tahan lisada matemaatika mängu lõpus tehke aken, mis küsib, kas soovite uuesti proovida
 
 tahan lisada matemaatikutele 3 erinevat reþiimi, nagu algaja, keskmine, edasijõudnud
 
