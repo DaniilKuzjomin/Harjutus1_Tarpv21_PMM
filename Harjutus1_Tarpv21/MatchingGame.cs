@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -436,7 +436,23 @@ namespace Harjutus1_Tarpv21
 
             MessageBox.Show("You matched all the icons!", "Congratulations");
             Close();
+
+
+            
+            var vastus = MessageBox.Show("Kas sa tahad veel üks kord mängida?", "Küsimus", MessageBoxButtons.YesNo);
+            if (vastus == DialogResult.Yes)
+            {
+                
+                MatchingGame game = new MatchingGame();
+                game.Show();
+            }
+            else
+            {
+                MessageBox.Show("500 EURO!");
+            }
+            
         }
 
     }
 }
+
