@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -13,12 +13,20 @@ namespace Harjutus1_Tarpv21
 {
     public class EsimeneVorm : Form
     {
+
         
+
 
         Button button1, button2, button3, button4;
-        Label fail;
 
-        
+        Label fail = new Label
+        {
+            Text = " ",
+            Location = new Point(230, 240),
+            Size = new Size(120, 30),
+            BackColor = Color.White,
+            BorderStyle = BorderStyle.FixedSingle,
+        };
 
         public EsimeneVorm()
         {
@@ -58,16 +66,6 @@ namespace Harjutus1_Tarpv21
                 Size = new Size(120, 70),
             };
 
-            Label fail = new Label
-            {
-                Text = " ",
-                Location = new System.Drawing.Point(150, 120),
-                Size = new System.Drawing.Size(150, 30),
-                BackColor = System.Drawing.Color.White,
-            };
-
-
-
 
             button1.Click += Button1_Click;
             button2.Click += Button2_Click;
@@ -78,6 +76,7 @@ namespace Harjutus1_Tarpv21
             this.Controls.Add(button2);
             this.Controls.Add(button3);
             this.Controls.Add(button4);
+            this.Controls.Add(fail);
 
 
         }
@@ -85,12 +84,14 @@ namespace Harjutus1_Tarpv21
         private void Button4_Click(object sender, EventArgs e) // Kood millega saab muusikat kuulata
         {
 
-                using (var muusika = new SoundPlayer(@"..\..\Drillhoven.wav"))
-                {
-                    muusika.Play();
-                    MessageBox.Show("Mängib muusika - Drillhoven - Fur elise drill remix(1)");
+            using (var muusika = new SoundPlayer(@"..\..\Drillhoven.wav"))
+            {
 
-                }
+                muusika.Play();
+                fail.Text = String.Format("Drillhoven - Fur elise drill remix"); // Labelis kuvatav tekst
+                MessageBox.Show("Mängib muusika - Drillhoven - Fur elise drill remix(1)");
+                    
+            }
            
         }
 
