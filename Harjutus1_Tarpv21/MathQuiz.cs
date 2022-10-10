@@ -257,6 +257,21 @@ namespace Harjutus1_Tarpv21
                     item.Enabled = false;
                 }
                 ClientSize = new Size(370, 300);
+                Close();
+
+                var vastus = MessageBox.Show("Kas sa tahad veel üks kord mängida?", "Küsimus", MessageBoxButtons.YesNo);
+                if (vastus == DialogResult.Yes)
+                {
+
+                    MathQuiz mathquiz = new MathQuiz();
+                    mathquiz.Show();
+                }
+                else
+                {
+                    MessageBox.Show("500 EURO!");
+                }
+
+
             }
         }
         private void ButtonTimer_Click(object sender, EventArgs e)
@@ -353,3 +368,4 @@ namespace Harjutus1_Tarpv21
 
     }
 }
+
