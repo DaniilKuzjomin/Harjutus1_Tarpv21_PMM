@@ -2,10 +2,9 @@
 
 tahan teha muusikat seda vormis et kasutaja saab kuulata muusikat
 
-teha kui lisate faili picture viweris et kuvada selle nimi vormis
+tahan teha kui lisate faili picture viweris et kuvada selle nimi vormis
 
-Looge matemaatikutele 3 erinevat reşiimi, nagu algaja, keskmine, edasijõudnud
+tahan lisada matemaatikutele 3 erinevat reÃ¾iimi, nagu algaja, keskmine, edasijÃµudnud
 
 
-Teha erineva raskusastmega reşiime
-piiratud aja ja taimeriga töötava reşiimi lisamine
+tahan teha erineva raskusastmega reÃ¾iime piiratud aja ja taimeriga tÃ¶Ã¶tava reÃ¾iimi lisamine
