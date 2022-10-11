@@ -8,7 +8,7 @@ tahan lisada matšimängu lõpus tehke aken, mis küsib, kas soovite uuesti proo
 
 tahan lisada matemaatika mängu lõpus tehke aken, mis küsib, kas soovite uuesti proovida
 
-EI OLE TEHTUD
+TEGEMATA
 
 tahan lisada matemaatikutele 3 erinevat reþiimi, nagu algaja, keskmine, edasijõudnud
 
