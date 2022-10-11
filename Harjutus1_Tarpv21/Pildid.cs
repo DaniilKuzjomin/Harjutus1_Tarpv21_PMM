@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +17,11 @@ namespace Harjutus1_Tarpv21
         TableLayoutPanel tableLayoutPanel;
         PictureBox picturebox;
         CheckBox checkBox;
-        Button close, backgroundcolor, clear, showapicture;
+        Button close, backgroundcolor, clear, showapicture, gray;
         ColorDialog colordialog;
         OpenFileDialog openfiledialog1;
         FlowLayoutPanel flowlayoutpanel;
+        TrackBar trackBar;
 
         public Pildid()
         {
@@ -106,6 +107,17 @@ namespace Harjutus1_Tarpv21
                 Color = Color.Red,
             };
 
+            gray = new Button
+            {
+                AutoSize = true,
+                Location = new Point(373, 3),
+                Size = new Size(75, 23),
+                TabIndex = 5,
+                Text = "Change photo color to Gray",
+                UseVisualStyleBackColor = true,
+            };
+            gray.Click += new EventHandler(Gray_Click);
+
 
 
             backgroundcolor = new Button // button paraametrid
@@ -156,7 +168,14 @@ namespace Harjutus1_Tarpv21
 
             };
 
-            Button[] buttons = { clear, showapicture, close, backgroundcolor }; // list
+            trackBar = new TrackBar
+            {
+
+
+            };
+            tableLayoutPanel.Controls.Add(trackBar);
+
+            Button[] buttons = { clear, showapicture, close, backgroundcolor, gray }; // list
             flowlayoutpanel = new FlowLayoutPanel // flowLayoutPanel paraametrid
             {
                 Dock = DockStyle.Fill,
@@ -211,9 +230,66 @@ namespace Harjutus1_Tarpv21
         {
             if (openfiledialog1.ShowDialog() == DialogResult.OK)
             {
-                picturebox.Load(openfiledialog1.FileName);
+                picturebox.Image = new Bitmap(openfiledialog1.FileName);
             }
         }
+
+
+        private void Gray_Click(object sender, EventArgs e)
+        {
+            Bitmap copyBitmap = new Bitmap((Bitmap)picturebox.Image);
+            ProcessImage(copyBitmap);
+            picturebox.Image = copyBitmap;
+        }
+
+
+
+        Image ZoomPicture(Image img, Size size)
+        {
+            Bitmap bm = new Bitmap(img, Convert.ToInt32(img.Width * size.Width), Convert.ToInt32(img.Height * size.Height));
+            Graphics gpu = Graphics.FromImage(bm);
+            gpu.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            return bm;
+        }
+
+        private void TrackBar_Scroll(object sender, EventArgs e)
+        {
+            if (trackBar.Value !=0)
+            {
+                picturebox.Image = null;
+                picturebox.Image = ZoomPicture(picturebox, new Size(trackBar.Value, trackBar.Value);
+            }
+        }
+
+
+
+        public bool ProcessImage(Bitmap bmp)
+        {
+            for(int i = 0; i<bmp.Width; i++)
+            {
+                for (int j = 0; j <bmp.Height; j++)
+                {
+                    Color bmpColor = bmp.GetPixel(i, j);
+                    int red = bmpColor.R;
+                    int green = bmpColor.G;
+                    int blue = bmpColor.B;
+                    int gray = (byte)(.299 * red + .587 * green + .114 * blue);
+                    red = gray;
+                    green = gray;
+                    blue = gray;
+                    bmp.SetPixel(i, j, Color.FromArgb(red, green, blue));
+                }
+            }
+            return true;
+        }
+
+
+
+
+
+
+
+
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)
         {
