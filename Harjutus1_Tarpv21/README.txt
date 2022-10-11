@@ -12,3 +12,5 @@ tahan lisada matemaatikutele 3 erinevat reþiimi, nagu algaja, keskmine, edasij�
 
 
 tahan teha erineva raskusastmega reþiime piiratud aja ja taimeriga töötava reþiimi lisamine
+
+Saada tööd Maximas
