@@ -300,3 +300,6 @@ namespace Harjutus1_Tarpv21
         }
     }
 }
+
+
+// Zoom In & Zoom Out Image in PictureBox | C# Windows Form
