@@ -12,6 +12,8 @@ lisatud nupp, mis muudab pildi värvi halliks
 
 lisatud nupp, millega saab teha peegelpildi
 
+lisatud nupp, millega saab slideshow teha
+
 TEGEMATA
 
 tahan lisada matemaatikutele 3 erinevat reþiimi, nagu algaja, keskmine, edasijõudnud
