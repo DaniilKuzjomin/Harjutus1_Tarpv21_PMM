@@ -10,6 +10,8 @@ lisatud matemaatika mängu lõpus tehke aken, mis küsib, kas soovite uuesti pro
 
 lisatud nupp, mis muudab pildi värvi halliks
 
+lisatud nupp, millega saab teha peegelpildi
+
 TEGEMATA
 
 tahan lisada matemaatikutele 3 erinevat reþiimi, nagu algaja, keskmine, edasijõudnud
