@@ -17,15 +17,19 @@ namespace Harjutus1_Tarpv21
         TableLayoutPanel tableLayoutPanel;
         PictureBox picturebox;
         CheckBox checkBox;
-        Button close, backgroundcolor, clear, showapicture, gray;
+        Button close, backgroundcolor, clear, showapicture, gray, rotate;
         ColorDialog colordialog;
         OpenFileDialog openfiledialog1;
         FlowLayoutPanel flowlayoutpanel;
         TrackBar trackBar;
 
+
+
+
+
         public Pildid()
         {
-            this.Size = new Size(920, 550); // akna paraametrid
+            this.Size = new Size(1000, 800); // akna paraametrid
             this.Text = "Picture Viewer";
             tableLayoutPanel = new TableLayoutPanel // tableLayoutPanel paraametrid
             {
@@ -50,15 +54,16 @@ namespace Harjutus1_Tarpv21
             this.Controls.Add(tableLayoutPanel);
 
 
-            picturebox = new PictureBox // PictureBox paraametrid
-            {
-                BorderStyle = BorderStyle.Fixed3D,
-                Dock = DockStyle.Fill,
-                Location = new Point(2, 2),
-                Size = new Size(528, 269),
-                TabIndex = 0,
-                TabStop = false,
-            };
+                picturebox = new PictureBox // PictureBox paraametrid
+                {
+                
+                    BorderStyle = BorderStyle.Fixed3D,
+                    Dock = DockStyle.Fill,
+                    Location = new Point(2, 2),
+                    Size = new Size(528, 269),
+                    TabIndex = 0,
+                    TabStop = false,
+                };
             tableLayoutPanel.Controls.Add(picturebox, 0, 0);
             tableLayoutPanel.SetCellPosition(picturebox, new TableLayoutPanelCellPosition(0, 0));
             tableLayoutPanel.SetColumnSpan(picturebox, 2);
@@ -118,6 +123,17 @@ namespace Harjutus1_Tarpv21
             };
             gray.Click += new EventHandler(Gray_Click);
 
+            rotate = new Button
+            {
+                AutoSize = true,
+                Location = new Point(454, 3),
+                Size = new Size(75, 23),
+                TabIndex = 6,
+                Text = "Rotate",
+                UseVisualStyleBackColor = true,
+            };
+            rotate.Click += new EventHandler(Rotate);
+
 
 
             backgroundcolor = new Button // button paraametrid
@@ -163,8 +179,7 @@ namespace Harjutus1_Tarpv21
             {
                 RestoreDirectory = true,
                 Title = "Browse Text Files",
-                Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
-    "s (*.*)|*.*",
+                Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" + "s (*.*)|*.*",
 
             };
 
@@ -175,7 +190,7 @@ namespace Harjutus1_Tarpv21
             };
             tableLayoutPanel.Controls.Add(trackBar);
 
-            Button[] buttons = { clear, showapicture, close, backgroundcolor, gray }; // list
+            Button[] buttons = { clear, showapicture, close, backgroundcolor, gray, rotate }; // list
             flowlayoutpanel = new FlowLayoutPanel // flowLayoutPanel paraametrid
             {
                 Dock = DockStyle.Fill,
@@ -244,21 +259,35 @@ namespace Harjutus1_Tarpv21
 
 
 
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            trackBar.Minimum = 1;
+            trackBar.Maximum = 6;
+            trackBar.SmallChange = 1;
+            trackBar.LargeChange = 1;
+            trackBar.UseWaitCursor = false;
+
+            DoubleBuffered = true;
+
+        }
+
+        private void TrackBar_Scroll(object sender, EventArgs e)
+        {
+            if (trackBar.Value != 0)
+            {
+                picturebox.Image = null;
+                picturebox.Image = ZoomPicture(picturebox.Image, new Size(trackBar.Value, trackBar.Value));
+            }
+        }
+
         Image ZoomPicture(Image img, Size size)
         {
             Bitmap bm = new Bitmap(img, Convert.ToInt32(img.Width * size.Width), Convert.ToInt32(img.Height * size.Height));
             Graphics gpu = Graphics.FromImage(bm);
             gpu.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             return bm;
-        }
-
-        private void TrackBar_Scroll(object sender, EventArgs e)
-        {
-            if (trackBar.Value !=0)
-            {
-                picturebox.Image = null;
-                picturebox.Image = ZoomPicture(picturebox, new Size(trackBar.Value, trackBar.Value);
-            }
         }
 
 
@@ -288,6 +317,15 @@ namespace Harjutus1_Tarpv21
 
 
 
+        private void Rotate(System.Object sender, System.EventArgs e) //funktsioon mis pöödrub pildi
+        {
+            Bitmap pic = new Bitmap(picturebox.Image);
+            if (pic != null)
+            {
+                pic.RotateFlip(RotateFlipType.Rotate180FlipY);
+                picturebox.Image = pic;
+            }
+        }
 
 
 
@@ -301,5 +339,5 @@ namespace Harjutus1_Tarpv21
     }
 }
 
-
 // Zoom In & Zoom Out Image in PictureBox | C# Windows Form
+
