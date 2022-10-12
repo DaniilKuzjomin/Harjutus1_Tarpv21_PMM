@@ -13,6 +13,7 @@ lisatud nupp, mis muudab pildi värvi halliks
 lisatud nupp, millega saab teha peegelpildi
 
 lisatud nupp, millega saab slideshow teha
+lisatud nupp, millega saab slideshow stop
 
 TEGEMATA
 
