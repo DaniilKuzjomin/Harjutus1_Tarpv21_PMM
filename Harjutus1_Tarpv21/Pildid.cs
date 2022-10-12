@@ -17,11 +17,14 @@ namespace Harjutus1_Tarpv21
         TableLayoutPanel tableLayoutPanel;
         PictureBox picturebox;
         CheckBox checkBox;
-        Button close, backgroundcolor, clear, showapicture, gray, rotate;
+        Button close, backgroundcolor, clear, showapicture, gray, rotate, slide;
         ColorDialog colordialog;
         OpenFileDialog openfiledialog1;
         FlowLayoutPanel flowlayoutpanel;
         TrackBar trackBar;
+        Timer timer1;
+        FolderBrowserDialog fold;
+        int imgNum = 1;
 
 
 
@@ -134,6 +137,17 @@ namespace Harjutus1_Tarpv21
             };
             rotate.Click += new EventHandler(Rotate);
 
+            slide = new Button
+            {
+                AutoSize = true,
+                Location = new Point(535, 3),
+                Size = new Size(75, 23),
+                TabIndex = 6,
+                Text = "Slide Show",
+                UseVisualStyleBackColor = true,
+            };
+            slide.Click += new EventHandler(SLideStart);
+
 
 
             backgroundcolor = new Button // button paraametrid
@@ -190,7 +204,14 @@ namespace Harjutus1_Tarpv21
             };
             tableLayoutPanel.Controls.Add(trackBar);
 
-            Button[] buttons = { clear, showapicture, close, backgroundcolor, gray, rotate }; // list
+            timer1 = new Timer
+            {
+                Interval = 1000,
+            };
+            timer1.Tick += timer1_Tick;
+
+
+            Button[] buttons = { clear, showapicture, close, backgroundcolor, gray, rotate, slide }; // list
             flowlayoutpanel = new FlowLayoutPanel // flowLayoutPanel paraametrid
             {
                 Dock = DockStyle.Fill,
@@ -205,6 +226,20 @@ namespace Harjutus1_Tarpv21
 
 
 
+
+        private void SLideStart(object sender, EventArgs e)
+        {
+            fold = new FolderBrowserDialog();
+            fold.ShowDialog();
+            timer1.Enabled = true;
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            picturebox.ImageLocation = string.Format(fold.SelectedPath + "\\img{0}.jpg", imgNum);
+            imgNum++;
+            if (imgNum == 4)
+                imgNum = 1;
+        }
 
 
         private void clear_Click(object sender, EventArgs e)
@@ -315,8 +350,6 @@ namespace Harjutus1_Tarpv21
 
 
 
-
-
         private void Rotate(System.Object sender, System.EventArgs e) //funktsioon mis pöödrub pildi
         {
             Bitmap pic = new Bitmap(picturebox.Image);
@@ -340,4 +373,3 @@ namespace Harjutus1_Tarpv21
 }
 
 // Zoom In & Zoom Out Image in PictureBox | C# Windows Form
-
