@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace Harjutus1_Tarpv21
         TableLayoutPanel tableLayoutPanel;
         PictureBox picturebox;
         CheckBox checkBox;
-        Button close, backgroundcolor, clear, showapicture, gray, rotate, slide;
+        Button close, backgroundcolor, clear, showapicture, gray, mirror, slide, stop, rotate;
         ColorDialog colordialog;
         OpenFileDialog openfiledialog1;
         FlowLayoutPanel flowlayoutpanel;
@@ -126,27 +127,49 @@ namespace Harjutus1_Tarpv21
             };
             gray.Click += new EventHandler(Gray_Click);
 
-            rotate = new Button
+            mirror = new Button
             {
                 AutoSize = true,
                 Location = new Point(454, 3),
                 Size = new Size(75, 23),
                 TabIndex = 6,
-                Text = "Rotate",
+                Text = "Mirror picture",
                 UseVisualStyleBackColor = true,
             };
-            rotate.Click += new EventHandler(Rotate);
+            mirror.Click += new EventHandler(Mirror);
+
+            rotate = new Button
+            {
+                AutoSize = true,
+                Location = new Point(697, 3),
+                Size = new Size(75, 23),
+                TabIndex = 9,
+                Text = "Rotate picture",
+                UseVisualStyleBackColor = true,
+            };
+            rotate.Click += Rotate_Click;
 
             slide = new Button
             {
                 AutoSize = true,
                 Location = new Point(535, 3),
                 Size = new Size(75, 23),
-                TabIndex = 6,
+                TabIndex = 7,
                 Text = "Slide Show",
                 UseVisualStyleBackColor = true,
             };
             slide.Click += new EventHandler(SLideStart);
+
+            stop = new Button
+            {
+                AutoSize = true,
+                Location = new Point(616, 3),
+                Size = new Size(75, 23),
+                TabIndex = 8,
+                Text = "Slide Show Stop",
+                UseVisualStyleBackColor = true,
+            };
+            stop.Click += new EventHandler(stop_Click);
 
 
 
@@ -211,7 +234,7 @@ namespace Harjutus1_Tarpv21
             timer1.Tick += timer1_Tick;
 
 
-            Button[] buttons = { clear, showapicture, close, backgroundcolor, gray, rotate, slide }; // list
+            Button[] buttons = { clear, showapicture, close, backgroundcolor, gray, mirror, slide, stop, rotate }; // list
             flowlayoutpanel = new FlowLayoutPanel // flowLayoutPanel paraametrid
             {
                 Dock = DockStyle.Fill,
@@ -222,9 +245,6 @@ namespace Harjutus1_Tarpv21
             tableLayoutPanel.Controls.Add(flowlayoutpanel, 1, 1); // asukohta seadistus
             Controls.Add(tableLayoutPanel); // vormis lisamine tableLayoutPanel
         }
-
-
-
 
 
         private void SLideStart(object sender, EventArgs e)
@@ -246,6 +266,13 @@ namespace Harjutus1_Tarpv21
         {
             picturebox.Image = null;
         }
+
+        private void stop_Click(object sender, EventArgs e)
+        {
+            picturebox.Image = null;
+        }
+
+
 
         private void backgroundcolor_Click(object sender, EventArgs e)
         {
@@ -273,7 +300,8 @@ namespace Harjutus1_Tarpv21
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            timer1.Enabled = false;
+            picturebox.Image = null;
         }
 
         private void showapicture_Click(object sender, EventArgs e)
@@ -291,10 +319,6 @@ namespace Harjutus1_Tarpv21
             ProcessImage(copyBitmap);
             picturebox.Image = copyBitmap;
         }
-
-
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -350,7 +374,7 @@ namespace Harjutus1_Tarpv21
 
 
 
-        private void Rotate(System.Object sender, System.EventArgs e) //funktsioon mis pöödrub pildi
+        private void Mirror(System.Object sender, System.EventArgs e) //funktsioon mis pöödrub pildi
         {
             Bitmap pic = new Bitmap(picturebox.Image);
             if (pic != null)
@@ -369,7 +393,10 @@ namespace Harjutus1_Tarpv21
             else
                 picturebox.SizeMode = PictureBoxSizeMode.Normal;
         }
+
+
     }
 }
 
 // Zoom In & Zoom Out Image in PictureBox | C# Windows Form
+
