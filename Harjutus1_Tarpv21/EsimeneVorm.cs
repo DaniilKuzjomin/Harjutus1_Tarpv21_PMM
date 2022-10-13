@@ -99,18 +99,21 @@ namespace Harjutus1_Tarpv21
         {
             MatchingGame game = new MatchingGame();
             game.Show();
+
         }
 
         private void Button2_Click(object sender, EventArgs e) // Kood millega saab avata Math Quiz
         {
             MathQuiz mathquiz = new MathQuiz();
             mathquiz.Show();
+            
         }
 
         private void Button1_Click(object sender, EventArgs e) // Kood millega saab avata Picture Viewer
         {
             Pildid pildid = new Pildid();
             pildid.Show();
+
         }
 
         private void InitializeComponent()

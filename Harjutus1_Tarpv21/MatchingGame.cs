@@ -438,11 +438,11 @@ namespace Harjutus1_Tarpv21
             Close();
 
 
-            
+
             var vastus = MessageBox.Show("Kas sa tahad veel üks kord mängida?", "Küsimus", MessageBoxButtons.YesNo);
             if (vastus == DialogResult.Yes)
             {
-                
+
                 MatchingGame game = new MatchingGame();
                 game.Show();
             }
@@ -450,9 +450,8 @@ namespace Harjutus1_Tarpv21
             {
                 MessageBox.Show("500 EURO!");
             }
-            
+
         }
 
     }
 }
-

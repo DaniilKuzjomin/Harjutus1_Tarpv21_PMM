@@ -26,6 +26,7 @@ namespace Harjutus1_Tarpv21
         Timer timer1;
         FolderBrowserDialog fold;
         int imgNum = 1;
+        int rAngle = 90;
 
 
 
@@ -147,7 +148,7 @@ namespace Harjutus1_Tarpv21
                 Text = "Rotate picture",
                 UseVisualStyleBackColor = true,
             };
-            rotate.Click += Rotate_Click;
+            rotate.Click += B_Rotate;
 
             slide = new Button
             {
@@ -296,6 +297,33 @@ namespace Harjutus1_Tarpv21
         private void Pildid_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void B_Rotate(object sender, EventArgs e)
+        {
+            picturebox.Image = RotateImage(picturebox.Image, rAngle);
+        }
+
+        public static Image RotateImage(Image img, float rAngle)
+        {
+            
+            Bitmap bmp = new Bitmap(img.Width, img.Height);
+
+
+            Graphics gfx = Graphics.FromImage(bmp);
+
+
+
+
+            gfx.TranslateTransform((float)bmp.Width / 2, (float)bmp.Height / 2);
+            gfx.RotateTransform(rAngle);
+            gfx.TranslateTransform(-(float)bmp.Width / 2, -(float)bmp.Height / 2);
+            gfx.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            gfx.DrawImage(img, new Point(0, 0));
+            gfx.Dispose();
+
+            return bmp;
         }
 
         private void close_Click(object sender, EventArgs e)
