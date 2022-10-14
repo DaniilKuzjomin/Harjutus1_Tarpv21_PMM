@@ -20,4 +20,6 @@ lisatud matemaatika mängu lõpus tehke aken, mis küsib, kas soovite uuesti pro
 
 lisatud matšimängu lõpus tehke aken, mis küsib, kas soovite uuesti proovida
 
+Lisatud aken 2 nuppuga milles on 2 rezimid, esimene on Stater reziim ja teine on Professional reziim
+
 
