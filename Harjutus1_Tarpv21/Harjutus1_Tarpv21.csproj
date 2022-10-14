@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,15 +51,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dialogMG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogMQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EsimeneVorm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MatchingGame.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MatchingGame_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MathQuiz.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MathQuiz_1.cs" />
     <Compile Include="Pildid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +96,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -97,7 +97,7 @@ namespace Harjutus1_Tarpv21
 
         private void Button3_Click(object sender, EventArgs e) // Kood millega saab avata Matching game
         {
-            MatchingGame game = new MatchingGame();
+            dialogMG game = new dialogMG();
             game.Show();
 
         }
