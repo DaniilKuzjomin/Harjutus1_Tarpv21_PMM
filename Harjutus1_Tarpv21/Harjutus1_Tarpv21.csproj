@@ -69,17 +69,28 @@
     <Compile Include="MathQuiz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MathQuiz_1.cs" />
+    <Compile Include="MathQuiz_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pildid.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dialogMG.resx">
+      <DependentUpon>dialogMG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogMQ.resx">
+      <DependentUpon>dialogMQ.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EsimeneVorm.resx">
       <DependentUpon>EsimeneVorm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MatchingGame.resx">
       <DependentUpon>MatchingGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchingGame_1.resx">
+      <DependentUpon>MatchingGame_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MathQuiz.resx">
       <DependentUpon>MathQuiz.cs</DependentUpon>

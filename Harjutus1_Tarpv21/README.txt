@@ -1,6 +1,8 @@
-TEHTUD
+
 
 lisatud muusikat esimeses vormis et kasutaja saab kuulata muusikat
+
+lisatud disain
 
 
 // PictureViewer
@@ -15,11 +17,13 @@ lisatud nupp, millega saab pöörda pilti 90 graadi
 
 lisatud matemaatika mängu lõpus tehke aken, mis küsib, kas soovite uuesti proovida
 
+Lisatud aken 2 nuppuga milles on 2 rezimid, esimene on Treening reziim ja teine on Timeriga  reziim
+
 
 // MatchingGame
 
 lisatud matšimängu lõpus tehke aken, mis küsib, kas soovite uuesti proovida
 
-Lisatud aken 2 nuppuga milles on 2 rezimid, esimene on Stater reziim ja teine on Professional reziim
+Lisatud aken 2 nuppuga milles on 2 rezimid, esimene on Algaja reziim ja teine on Progesionaalne reziim
 
 

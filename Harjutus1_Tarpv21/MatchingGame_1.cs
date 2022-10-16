@@ -151,9 +151,18 @@ namespace Harjutus1_Tarpv21
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            this.ClientSize = new Size(284, 261);
+            // 
+            // MatchingGame_1
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "MatchingGame_1";
+            this.Load += new System.EventHandler(this.MatchingGame_1_Load);
             this.ResumeLayout(false);
+
+        }
+
+        private void MatchingGame_1_Load(object sender, EventArgs e)
+        {
 
         }
     }

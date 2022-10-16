@@ -32,21 +32,22 @@ namespace Harjutus1_Tarpv21
         {
             this.Text = "Esimene Vorm";
             this.Size = new Size(600, 400);
-            this.BackColor = Color.White;
+            this.BackColor = Color.LightPink;
 
             button1 = new Button // nupp mis teeb lahti Picture Viewer
             {
                 Text = "PictureViewer",
                 Location = new Point(100, 50),
-                BackColor = Color.White,
-                Size = new Size(120, 70)
+                BackColor = Color.Pink,
+                Size = new Size(120, 70),
+
             };
 
             button2 = new Button // nupp mis teeb lahti Math Quiz
             {
                 Text = "Math Quiz",
                 Location = new Point(230, 50),
-                BackColor = Color.White,
+                BackColor = Color.Pink,
                 Size = new Size(120, 70)
             };
 
@@ -54,7 +55,7 @@ namespace Harjutus1_Tarpv21
             {
                 Text = "Matching Game",
                 Location = new Point(360, 50),
-                BackColor = Color.White,
+                BackColor = Color.Pink,
                 Size = new Size(120, 70),
             };
 
@@ -62,7 +63,7 @@ namespace Harjutus1_Tarpv21
             {
                 Text = "Muusika",
                 Location = new Point(230, 150),
-                BackColor = Color.White,
+                BackColor = Color.Pink,
                 Size = new Size(120, 70),
             };
 
@@ -104,9 +105,9 @@ namespace Harjutus1_Tarpv21
 
         private void Button2_Click(object sender, EventArgs e) // Kood millega saab avata Math Quiz
         {
-            MathQuiz mathquiz = new MathQuiz();
-            mathquiz.Show();
-            
+            dialogMQ game = new dialogMQ();
+            game.Show();
+
         }
 
         private void Button1_Click(object sender, EventArgs e) // Kood millega saab avata Picture Viewer
@@ -119,9 +120,6 @@ namespace Harjutus1_Tarpv21
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            // 
-            // EsimeneVorm
-            // 
             this.ClientSize = new Size(284, 261);
             this.Name = "EsimeneVorm";
             this.Load += new System.EventHandler(this.EsimeneVorm_Load);
