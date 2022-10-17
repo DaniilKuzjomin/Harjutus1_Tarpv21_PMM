@@ -46,6 +46,7 @@ namespace Harjutus1_Tarpv21
             ClientSize = new Size(320, 300);
             Name = "MathQuiz";
             Text = "Maths Quiz Game";
+            BackColor = Color.LightPink;
             ResumeLayout(false);
             PerformLayout();
             labelSymArray = new Label[] { lblSymbol1, lblSymbol2, lblSymbol3, lblSymbol4 };

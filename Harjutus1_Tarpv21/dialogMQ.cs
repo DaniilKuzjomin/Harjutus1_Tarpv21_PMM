@@ -40,12 +40,12 @@ namespace Harjutus1_Tarpv21
         public dialogMQ()
         {
 
-            Text = "Esimene Vorm";
+            Text = "Dialog Math Quiz";
             BackColor = Color.LightPink;
             ClientSize = new Size(450, 250);
             button1 = new Button
             {
-                Text = "Math Quiz ( Training )",
+                Text = "Math Quiz ( Treening )",
                 Location = new Point(50, 50),
                 BackColor = Color.Pink,
                 Size = new Size(170, 70)
@@ -54,7 +54,7 @@ namespace Harjutus1_Tarpv21
 
             button2 = new Button
             {
-                Text = "Math game ( Main )",
+                Text = "Math game ( Pea režiim )",
                 Location = new Point(230, 50),
                 BackColor = Color.Pink,
                 Size = new Size(170, 70)

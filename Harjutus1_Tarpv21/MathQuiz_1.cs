@@ -148,6 +148,7 @@ namespace Harjutus1_Tarpv21
             Controls.Add(this.lblScore);
             Name = "MathQuiz_1";
             Text = "MathQuiz Game";
+            BackColor = Color.LightPink;
             ResumeLayout(false);
             PerformLayout();
 

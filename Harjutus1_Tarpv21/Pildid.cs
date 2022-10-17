@@ -36,6 +36,7 @@ namespace Harjutus1_Tarpv21
         {
             this.Size = new Size(1000, 800); // akna paraametrid
             this.Text = "Picture Viewer";
+            BackColor = Color.LightPink;
             tableLayoutPanel = new TableLayoutPanel // tableLayoutPanel paraametrid
             {
                 AutoSize = true,
@@ -81,7 +82,7 @@ namespace Harjutus1_Tarpv21
                 Size = new Size(117, 30),
                 TabIndex = 1,
                 UseVisualStyleBackColor = true,
-                Text = "Stretch",
+                Text = "Venitada",
                 Dock = DockStyle.Fill,
             };
             checkBox.CheckedChanged += new EventHandler(checkBox_CheckedChanged);
@@ -99,7 +100,7 @@ namespace Harjutus1_Tarpv21
                 Location = new Point(3, 3),
                 Size = new Size(75, 23),
                 TabIndex = 0,
-                Text = "Close",
+                Text = "Kinni",
                 UseVisualStyleBackColor = true,
 
 
@@ -123,7 +124,7 @@ namespace Harjutus1_Tarpv21
                 Location = new Point(373, 3),
                 Size = new Size(75, 23),
                 TabIndex = 5,
-                Text = "Change photo color to Gray",
+                Text = "Teha pilt halliks",
                 UseVisualStyleBackColor = true,
             };
             gray.Click += new EventHandler(Gray_Click);
@@ -134,7 +135,7 @@ namespace Harjutus1_Tarpv21
                 Location = new Point(454, 3),
                 Size = new Size(75, 23),
                 TabIndex = 6,
-                Text = "Mirror picture",
+                Text = "Pildi peegeldamine",
                 UseVisualStyleBackColor = true,
             };
             mirror.Click += new EventHandler(Mirror);
@@ -145,7 +146,7 @@ namespace Harjutus1_Tarpv21
                 Location = new Point(697, 3),
                 Size = new Size(75, 23),
                 TabIndex = 9,
-                Text = "Rotate picture",
+                Text = "Pildi pööramine",
                 UseVisualStyleBackColor = true,
             };
             rotate.Click += B_Rotate;
@@ -180,7 +181,7 @@ namespace Harjutus1_Tarpv21
                 Location = new Point(84, 3),
                 Size = new Size(121, 23),
                 TabIndex = 1,
-                Text = "Set Background Color",
+                Text = "Taustaseade",
                 UseVisualStyleBackColor = true,
 
             };
@@ -194,7 +195,7 @@ namespace Harjutus1_Tarpv21
                 Location = new Point(211, 3),
                 Size = new Size(75, 23),
                 TabIndex = 2,
-                Text = "Clear",
+                Text = "Selge",
                 UseVisualStyleBackColor = true,
             };
             tableLayoutPanel.Controls.Add(clear); // vormis lisamine button
@@ -206,7 +207,7 @@ namespace Harjutus1_Tarpv21
                 Location = new Point(292, 3),
                 Size = new Size(102, 23),
                 TabIndex = 3,
-                Text = "Show The Picture",
+                Text = "Näita pilti",
                 UseVisualStyleBackColor = true,
 
             };

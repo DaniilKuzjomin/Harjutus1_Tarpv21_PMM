@@ -95,6 +95,9 @@
     <EmbeddedResource Include="MathQuiz.resx">
       <DependentUpon>MathQuiz.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MathQuiz_1.resx">
+      <DependentUpon>MathQuiz_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pildid.resx">
       <DependentUpon>Pildid.cs</DependentUpon>
     </EmbeddedResource>

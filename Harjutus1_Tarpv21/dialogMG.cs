@@ -27,12 +27,12 @@ namespace Harjutus1_Tarpv21
 
 
 
-            Text = "Esimene Vorm";
+            Text = "Dialog Matching Game";
             Size = new Size(450, 240);
             BackColor = Color.LightPink;
             button1 = new Button 
             {
-                Text = "Matching game ( Starter )",
+                Text = "Matching game ( Algaja )",
                 Location = new Point(50, 50),
                 BackColor = Color.Pink,
                 Size = new Size(170, 70)
@@ -41,7 +41,7 @@ namespace Harjutus1_Tarpv21
 
             button2 = new Button 
             {
-                Text = "Matching game ( Professional )",
+                Text = "Matching game ( Professionaalne )",
                 Location = new Point(230, 50),
                 BackColor = Color.Pink,
                 Size = new Size(170, 70)
@@ -63,7 +63,18 @@ namespace Harjutus1_Tarpv21
         private void InitializeComponent()
         {
             this.SuspendLayout();
+            // 
+            // dialogMG
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "dialogMG";
+            this.Load += new System.EventHandler(this.dialogMG_Load);
             this.ResumeLayout(false);
+
+        }
+
+        private void dialogMG_Load(object sender, EventArgs e)
+        {
 
         }
 
